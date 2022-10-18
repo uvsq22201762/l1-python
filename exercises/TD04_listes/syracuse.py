@@ -1,4 +1,7 @@
-def syracuse(n):
+
+def syracuse(n):  
+    if n == 1:
+        return [1]
     suite = []
     while n != 1:
         if n % 2 == 0:
@@ -15,12 +18,37 @@ print(syracuse(3))
 
 def testeConjecture(n_max):
     for i in range(1, n_max):
-        if syracuse(i) == 1:
+        l = syracuse(i)
+        if l[-1] == 1:
             pass
+        else : 
+            return False
+    return True
+    """ Teste la conjecture de Collatz pour toutes les valeurs de 1 à n_max """
+    pass
 
-        else:
-            return("False")
-    return("True")
- 
 
 print(testeConjecture(10000))
+
+def tempsVol(n):
+    l_1 = syracuse(n)
+    if l_1[0] == 1:
+        return ("0")
+    else:    
+        return len(syracuse(n))
+    """ Retourne le temps de vol de n """
+    pass
+
+print("Le temps de vol de", 3, "est", tempsVol(3))
+
+
+def tempsVolListe(n_max):
+    return[tempsVol(i) for i in range(1, n_max)]
+    """ Retourne la liste de tous les temps de vol de 1 à n_max """
+    pass
+
+print(tempsVolListe(100))
+
+
+
+
