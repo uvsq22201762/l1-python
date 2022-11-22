@@ -26,7 +26,7 @@ def testeConjecture(n_max):
     return True
     """ Teste la conjecture de Collatz pour toutes les valeurs de 1 à n_max """
     pass
-
+ghgh
 
 print(testeConjecture(10000))
 
